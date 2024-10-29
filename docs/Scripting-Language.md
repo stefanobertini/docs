@@ -672,7 +672,7 @@ SEL:
 `sml(m 0 bd)` = set SML baud rate of Meter m to bd (baud)  
 `sml(m 1 htxt)` = send SML Hex string htxt as binary to Meter m  
 `sml(-m 1 initstr)` = reinits serial port of Meter m, initstr: "baud:mode" e.g. "9600:8E1", currently only baud and N,E,O are evaluated.    
-`sml(m 2)` = reads serial data received by Meter m into string (if m<0 reads hex values, else asci values)
+`sml(m 2)` = reads serial data received by Meter m into string (if m<0 reads hex values, else asci values)   
 `sml(m 3 hstr)` = inserts SML Hexstring variable hstr as binary to Meter m in Output stream e.g. for special MODBUS cmds, hstr must be a string variable NO string constant   
 `sml[n]` = get value of SML energy register n   
 `smls[m]` = get value of SML meter string info of meter m, if m < 0 gets string representation of numeric value of decode line m, this enables double number resolution.  
@@ -696,8 +696,8 @@ SEL:
 `eres` = result of >E section set this var to 1 in section >E to tell Tasmota event is handled (prevents MQTT)  
 
 The following variables are cleared after reading true:  
-`chg[var]` = true if a variables value was changed (numeric vars only)
-`diff[var]` = difference since last variable update
+`chg[var]` = true if a variables value was changed (numeric vars only)   
+`diff[var]` = difference since last variable update  
 `upd[var]` = true if a variable was updated  
 `boot` = true on BOOT  
 `tinit` = true on time init  
@@ -928,7 +928,7 @@ Instead of passing the `msg` as a string constant, the body of the e-mail messag
 &arrayname specifies an array attachment (as tab delimited text, no file system needed)  
 $N attach a webcam picture from rambuffer number N (usually 1)  
   
-See [Scripting Cookbook Example].(#send-e-mail)  
+See [Scripting Cookbook Example](#send-e-mail)  
  
 **Subscribe, Unsubscribe**  
 `#define SUPPORT_MQTT_EVENT`  
